@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #FAFAF8;
+}
+
+.header{
+    display:flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 111px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar>.nav-image{
+    width: 43px;
+    margin-right: 10px;
+}
+
+.navbar>p{
+    font-size: 2rem;
+}
+
+.addingredient{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.textfield{
+    height: 38px;
+    width: 399px;
+    border-radius: 0.4rem;
+    border: 1px solid #D1D5DB;
+}
+
+.addbutton{
+    height: 38px;
+    width: 183px;
+    color: #FAFAF8;
+    background-color: #141413;
+    border-radius: 0.4rem;
+    border: none;
+    font-family: Inter, sans-serif;
+}
+
+.ingredient-flex-box{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.ingredient-container{
+    width: 594px;
+    text-align: left;
+}
+
+.list-heading{
+    padding-top: 10px;
+    
+}
+
+.recipe-finder{
+    display: flex;
+    height: 109px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0EFEB;
+    border-radius: 0.9rem;
+}
+
+.recipe-finder > button{
+    background-color: #D17557;
+    height: 38px;
+    width: 115px;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    border-style: none;
+    margin-left: 50px;
+}
+
+.recipe-finder-heading{
+    margin: 0%;
+    color: #141413;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.recipe-finder-subheading{
+    margin: 0%;
+    margin-top: 10px;
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+.recipe-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.recipe{
+    width: 594px;
+    text-align: left;
+}
+
+.suggested-recipe-container{
+    color: #475467;
+}
