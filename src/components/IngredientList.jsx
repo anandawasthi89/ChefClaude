@@ -1,4 +1,4 @@
-export function IngredientList({ ingredients,getRecipe }) {
+export function IngredientList({ ingredients,getRecipe,ref }) {
     return (
         <section className="ingredient-flex-box">
             <div className="ingredient-container">
@@ -7,7 +7,7 @@ export function IngredientList({ ingredients,getRecipe }) {
                     {ingredients}
                 </ul>
                 {ingredients.length > 3 && <div className="recipe-finder">
-                    <div className="recipe-finder-label">
+                    <div ref={ref} className="recipe-finder-label">
                         <p className="recipe-finder-heading">Ready for a recipe?</p>
                         <p className="recipe-finder-subheading">Generate a recipe from your list of ingredients.</p>
                     </div>

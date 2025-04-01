@@ -2,11 +2,13 @@ import React from "react"
 import { getRecipeFromMistral } from "../ai"
 import { RecipeClaude } from "./RecipeClaude"
 import { IngredientList } from "./IngredientList"
+import { useEffect } from "react"
 
 export function Main() {
 
     const [ingredients, setIngredients] = React.useState([])
     const [recipeResult, setRecipeResult] = React.useState("")
+    const recipeView = React.useRef(null)
 
     async function getRecipe() {
 
@@ -26,6 +28,12 @@ export function Main() {
         }
     }
 
+    React.useEffect(()=>{
+        if(recipeResult!==""&&recipeView.current!==null){
+            recipeView.current.scrollIntoView({behaviour: "smooth"});
+        }
+    },[recipeResult])
+
     return (
         <main>
             <form className="addingredient" action={handleSubmit}>
@@ -38,6 +46,7 @@ export function Main() {
                 <button className="addbutton">+ Add Ingredient</button>
             </form>
             <IngredientList
+                ref = {recipeView}
                 ingredients={ingredients}
                 getRecipe={getRecipe}
             />
